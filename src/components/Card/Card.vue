@@ -1,5 +1,5 @@
 <template>
-    <div class="custom-card rounded-xs p-2 shadow-sm flex flex-col align-center gap-1">
+    <div class="custom-card rounded-xs p-2 shadow-sm">
         <slot />
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 <style>
     .custom-card {
         width: 310px;
-        height: 400px;
+        height: 420px;
     }
 
     @media screen and (max-width: 768px) {

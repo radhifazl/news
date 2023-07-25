@@ -3,7 +3,7 @@
         <div class="news-thumbnail w-100 rounded-xs">
             <img :src="news.image" alt="News Thumbnail">
         </div>
-        <div class="news-source w-100 flex justify-between align-center text-xs">
+        <div class="news-source my-3 w-100 flex justify-between align-center text-xs">
             <p>{{ news.source.name }}</p>
             <p>{{ date }}</p>
         </div>
@@ -64,7 +64,7 @@ export default {
 
         .news-subtitle {
             height: 70px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
     }
 </style>

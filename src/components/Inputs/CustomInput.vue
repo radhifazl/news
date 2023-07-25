@@ -1,10 +1,10 @@
 <template>
-    <input v-bind="$attrs" 
+    <input 
         :type="type" 
         :name="name" 
         :placeholder="placeholder"
         :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="updateValue($event.target.value)"
         class="custom-input rounded-xs px-2 py-1 w-100"
     />
 </template>
@@ -26,6 +26,11 @@ export default {
         },
         modelValue: {
             type: String,
+        }
+    },
+    methods: {
+        updateValue(value) {
+            this.$emit('input', value);
         }
     }
 }

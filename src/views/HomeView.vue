@@ -2,7 +2,8 @@
   <div class="home">
     <HomeHeading />
 
-    <Title text="Today's News" class="p-2"/>
+      <Title text="Loading news..." class="p-2" v-if="$store.state.loading === true"/>
+      <Title text="Today's news" class="p-2" v-else/>
 
     <HomeNews />
   </div>

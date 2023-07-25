@@ -6,12 +6,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    news: []
+    news: [],
+    loading: false,
   },
   getters: {
     news(state) {
       return state.news
-    }
+    },
+    // query(state) {
+    //   return state.query
+    // }
   },
   mutations: {
     SET_NEWS(state, news) {
@@ -25,12 +29,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    fetchNews({commit}) {
+    fetchNews({commit}, query) {
+
       const API_KEY = '318d2024a3c09afc72ecd98d63406107'
-      axios.get(`https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=${API_KEY}`)
+      this.state.loading = true
+      axios.get(`https://gnews.io/api/v4/search?q=${query}&lang=en&country=us&max=10&apikey=${API_KEY}`)
         .then(res => {
           commit('SET_NEWS', res.data.articles)
+          this.state.loading = false
         }).catch(err => console.log(err))
+        .finally(() => this.state.loading = false)
     },
   },
 })
