@@ -1,5 +1,5 @@
 <template>
-    <label class="text-md font-medium" style="color: #FFF;">
+    <label class="text-md font-medium">
         {{ text }}
     </label>
 </template>

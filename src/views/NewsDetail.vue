@@ -2,7 +2,7 @@
     <div class="news-detail w-100">
         <Sidebar :data="newsDetail" v-if="openSidebar" @click="openSidebar = false"/>
         <NewsDetailWrapper>
-            <NewsDetailImage />
+            <NewsDetailImage :img="newsDetail.image"/>
             <NewsDetailContent :source="newsDetail" @click="openSidebar = true"/>
         </NewsDetailWrapper>
     </div>

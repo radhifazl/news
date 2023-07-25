@@ -1,18 +1,18 @@
 <template>
-    <div class="sidebar w-25 h-screen p-4">
+    <div class="sidebar w-50 h-screen p-4 shadow-sm">
         <CustomButton text="Close" @click="$emit('click')"/>
-        <EditForm>
+        <EditForm @submit="submitNews">
             <div class="inp-box title">
                 <CustomLabel text="Title"/>
-                <CustomInput type="text" name="title" placeholder="Title" class="my-2"/>
+                <CustomInput type="text" name="title" :placeholder="data.title" class="my-2" v-model="editNews.title"/>
             </div>
             <div class="inp-box author">
                 <CustomLabel text="Author"/>
-                <CustomInput type="text" name="author" placeholder="Author" class="my-2"/>
+                <CustomInput type="text" name="author" :placeholder="data.source.name" class="my-2" v-model="editNews.author"/>
             </div>
             <div class="inp-box content">
                 <CustomLabel text="Content"/>
-                <CustomInput type="text" name="content" placeholder="Content" class="my-2"/>
+                <VueEditor v-model="editNews.content" class="my-2"/>
             </div>
 
             <div class="inp-box">
@@ -26,21 +26,55 @@ import CustomButton from '../Buttons/CustomButton.vue';
 import CustomLabel from '../Labels/CustomLabel.vue';
 import CustomInput from '../Inputs/CustomInput.vue';
 import EditForm from '../EditForm.vue';
+import { VueEditor } from "vue2-editor";
 
 export default {
     name: "SidebarComponent",
-    components: { CustomButton, EditForm, CustomInput, CustomLabel },
+    components: { CustomButton, EditForm, CustomInput, CustomLabel, VueEditor },
     props: {
         data: {
             type: Object,
             default: () => {}
+        }
+    },
+    data() {
+        return {
+            editNews: {
+                id: this.$route.params.id,
+                image: this.data.image,
+                title: this.data.title,
+                author: this.data.source.name,
+                date: this.data.publishedAt,
+                content: this.data.content
+            },
+        };
+    },
+    methods: {
+        submitNews() {
+            const news = {
+                title: this.editNews.title,
+                author: this.editNews.author,
+                image: this.data.image,
+                content: this.editNews.content
+            }
+
+            localStorage.setItem('news', JSON.stringify({
+                title: news.title,
+                source: {
+                    name: news.author
+                },
+                content: news.content,
+                ...news
+            }));
+
+            window.location.reload();
         }
     }
 }
 </script>
 <style lang="scss">
     .sidebar {
-        background-color: $base-color;
+        background: $white;
         position: fixed;
         right: 0;
         top: 0;

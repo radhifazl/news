@@ -1,18 +1,27 @@
 <template>
-    <div class="news-detail-image w-50 h-50 mx-auto">
-        <img :src="'https://m-cdn.phonearena.com/images/article/149030-wide-two_1200/Sony-WF-1000XM5-may-come-on-July-24-with-updated-ANC-capabilities.jpg'"/>
+    <div class="news-detail-image mx-auto">
+        <img :src="img"/>
     </div>
 </template>
 <script>
 export default {
     name: 'NewsDetailImage',
+    props: ['img']
 }
 </script>
 <style lang="scss">
     .news-detail-image {
+        width: 50%;
+        height: 50%;
         img {
             width: 100%;
             object-fit: cover;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .news-detail-image {
+            width: 100%;
         }
     }
 </style>

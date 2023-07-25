@@ -12,4 +12,10 @@ export default {
 .news-detail-wrapper {
     height: fit-content;
 }
+
+@media screen and (max-width: 768px) {
+    .news-detail-wrapper {
+        width: 100%;
+    }
+}
 </style>

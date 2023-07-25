@@ -14,7 +14,7 @@
         </div>
         <div class="news-content">
             <p class="text-h5">
-                {{ source.content }}
+                {{ getPlainTextFromHTML(source.content) }}
             </p>
         </div>
     </div>
@@ -38,6 +38,16 @@ export default {
             type: Object,
             default: () => {}
         }
+    },
+    methods: {
+        getPlainTextFromHTML(htmlString) {
+            // Create a temporary element to convert HTML to plain text
+            const tempElement = document.createElement('div');
+            tempElement.innerHTML = htmlString;
+
+            // Return the text content of the temporary element
+            return tempElement.textContent || tempElement.innerText || '';
+        },
     }
 }
 </script>
