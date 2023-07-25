@@ -15,7 +15,13 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_NEWS(state, news) {
-      state.news = news
+      const newsWithID = news.map((item, index) => {
+        return {
+          id: index + 1,
+          ...item
+        }
+      })
+      state.news = newsWithID
     }
   },
   actions: {
@@ -25,6 +31,6 @@ export default new Vuex.Store({
         .then(res => {
           commit('SET_NEWS', res.data.articles)
         }).catch(err => console.log(err))
-    }
+    },
   },
 })

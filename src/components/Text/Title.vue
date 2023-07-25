@@ -1,5 +1,5 @@
 <template>
-    <h1 class="heading-title font-semibold">
+    <h1 class="heading-title font-semibold truncate-multiple">
         {{ text }}
     </h1>
 </template>

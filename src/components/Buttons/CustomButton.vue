@@ -1,6 +1,6 @@
 <template>
-    <div class="custom-button ">
-        <button :type="type" :disabled="disabled" class="py-2 px-4 rounded-xs font-semibold">
+    <div class="custom-button">
+        <button :type="type" :disabled="disabled" class="py-2 px-4 rounded-xs font-semibold" :class="customClass">
             {{ text }}
         </button>
     </div>
@@ -20,6 +20,10 @@ export default {
         disabled: {
             type: Boolean,
             default: false
+        },
+        customClass: {
+            type: String,
+            default: ''
         }
     }
 }

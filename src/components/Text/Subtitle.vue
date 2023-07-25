@@ -1,5 +1,5 @@
 <template>
-    <h2 class="heading-subtitle font-medium my-2">
+    <h2 class="heading-subtitle font-medium my-2 truncate-multiple">
         {{ text }}
     </h2>
 </template>
@@ -15,4 +15,7 @@ export default {
 }
 </script>
 <style lang="scss">
+.heading-subtitle {
+    -webkit-line-clamp: 4 !important;
+}
 </style>
