@@ -1,1 +1,33 @@
-$primary-color:#0080ff;
+// Base font size
+$base-font-size: 16px;
+
+$font-size-xs: 0.75rem;   // Extra Small (12px)
+$font-size-sm: 0.875rem;  // Small (14px)
+$font-size-md: 1rem;      // Medium (16px) - Same as the base font size
+$font-size-lg: 1.25rem;   // Large (20px)
+$font-size-xl: 1.5rem;    // Extra Large (24px)
+
+// Heading font sizes
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+// Padding in Pixels
+$padding-1: 5px;
+$padding-2: 10px;
+$padding-3: 15px;
+$padding-4: 20px;
+$padding-5: 25px;
+
+// Margin in Pixels
+$margin-1: 5px;
+$margin-2: 10px;
+$margin-3: 15px;
+$margin-4: 20px;
+$margin-5: 25px;
+
+
+$primary-color:#292929;

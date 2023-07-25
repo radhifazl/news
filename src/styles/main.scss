@@ -1,1 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
 @import './variables.scss';
+@import './_font-weight.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $base-font-size;
+    color: $primary-color;
+}
+
+// --------------------- Utility Classes
+// --------------------- Text Align
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// --------------------- Font Sizes
+.text-xs {
+    font-size: $font-size-xs;
+}
+
+.text-sm {
+    font-size: $font-size-sm;
+}
+
+.text-md {
+    font-size: $font-size-md;
+}
+
+.text-lg {
+    font-size: $font-size-lg;
+}
+
+.text-xl {
+    font-size: $font-size-xl;
+}
+
+// --------------------- Headings
+.text-h1 {
+    font-size: $font-size-h1;
+}
+
+.text-h2 {
+    font-size: $font-size-h2;
+}
+
+.text-h3 {
+    font-size: $font-size-h3;
+}
+
+.text-h4 {
+    font-size: $font-size-h4;
+}
+
+.text-h5 {
+    font-size: $font-size-h5;
+}
+
+.text-h6 {
+    font-size: $font-size-h6;
+}
+
+// --------------------- Padding
+.p-1 {
+    padding: $padding-1;
+}
+
+.p-2 {
+    padding: $padding-2;
+}
+
+.p-3 {
+    padding: $padding-3;
+}
+
+.p-4 {
+    padding: $padding-4;
+}
+
+.p-5 {
+    padding: $padding-5;
+}
+
+// --------------------- Margin
+.m-1 {
+    margin: $margin-1;
+}
+
+.m-2 {
+    margin: $margin-2;
+}
+
+.m-3 {
+    margin: $margin-3;
+}
+
+.m-4 {
+    margin: $margin-4;
+}
+
+.m-5 {
+    margin: $margin-5;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mx-1 {
+    margin-left: $margin-1;
+    margin-right: $margin-1;
+}
+
+.mx-2 {
+    margin-left: $margin-2;
+    margin-right: $margin-2;
+}
+
+.mx-3 {
+    margin-left: $margin-3;
+    margin-right: $margin-3;
+}
+
+.mx-4 {
+    margin-left: $margin-4;
+    margin-right: $margin-4;
+}
+
+.mx-5 {
+    margin-left: $margin-5;
+    margin-right: $margin-5;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.my-1 {
+    margin-top: $margin-1;
+    margin-bottom: $margin-1;
+}
+
+.my-2 {
+    margin-top: $margin-2;
+    margin-bottom: $margin-2;
+}
+
+.my-3 {
+    margin-top: $margin-3;
+    margin-bottom: $margin-3;
+}
+
+.my-4 {
+    margin-top: $margin-4;
+    margin-bottom: $margin-4;
+}
+
+.my-5 {
+    margin-top: $margin-5;
+    margin-bottom: $margin-5;
+}
+
