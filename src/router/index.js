@@ -10,6 +10,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/news/:id',
+    name: 'news',
+    component: () => import('../views/NewsDetail.vue')
+  }
 ]
 
 const router = new VueRouter({

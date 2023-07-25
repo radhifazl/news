@@ -1,13 +1,14 @@
 <template lang="">
-    <div>
+    <NewsDetailWrapper>
         
-    </div>
+    </NewsDetailWrapper>
 </template>
 <script>
+import NewsDetailWrapper from '@/components/News/NewsDetailWrapper.vue'
 export default {
-    
+    name: 'NewsDetail'
 }
 </script>
-<style lang="">
+<style lang="scss">
     
 </style>
