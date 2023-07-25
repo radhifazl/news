@@ -435,3 +435,7 @@ li {
     -webkit-line-clamp: 2; /* start showing ellipsis when 3rd line is reached */
     white-space: pre-wrap;
 }
+
+.image-cover {
+    object-fit: cover;
+}

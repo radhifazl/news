@@ -14,7 +14,7 @@
             <Subtitle :text="news.description" class="text-xs font-light"/>
         </div>
         <div class="news-button">
-            <CustomButton text="Read" customClass="w-100"/>
+            <CustomButton text="Read" customClass="w-100" @click="readDetail(news.id)"/>
         </div>
     </Card>
 </template>
@@ -39,6 +39,12 @@ export default {
     computed: {
         date() {
             return moment(this.news.publishedAt).format('YYYY-MM-DD');
+        }
+    },
+    methods: {
+        readDetail(id) {
+            this.$router.push(`/news/${id}`);
+            localStorage.setItem('news', JSON.stringify(this.news));
         }
     }
 }

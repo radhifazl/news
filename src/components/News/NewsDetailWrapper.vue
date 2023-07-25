@@ -1,5 +1,5 @@
 <template>
-    <div class="news-detail-wrapper w-75 shadow-md h-screen">
+    <div class="news-detail-wrapper w-75 mx-auto">
         <slot />
     </div>
 </template>
@@ -8,6 +8,8 @@ export default {
     name: 'NewsDetailWrapper'
 }
 </script>
-<style>
-    
+<style lang="scss">
+.news-detail-wrapper {
+    height: fit-content;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <label class="text-md font-medium">
+    <label class="text-md font-medium" style="color: #FFF;">
         {{ text }}
     </label>
 </template>
@@ -14,6 +14,6 @@ export default {
     }
 }
 </script>
-<style lang="">
+<style lang="scss">
     
 </style>

@@ -17,7 +17,7 @@ export default {
         ...mapGetters(['news'])
     },
     methods: {
-        ...mapActions(['fetchNews'])
+        ...mapActions(['fetchNews']),
     },
     mounted() {
         this.fetchNews();
