@@ -1,16 +1,16 @@
 <template>
-    <h1 class="heading-title font-semibold text-center">
+    <h1 class="heading-title font-semibold">
         {{ text }}
     </h1>
 </template>
 <script>
 export default {
-    name: 'Heading-Title',
+    name: 'HeadingTitle',
     props: {
         text: {
             type: String,
             required: true
-        }
+        },
     }
 }
 </script>

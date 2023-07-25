@@ -1,18 +1,19 @@
 <template>
-    <h2 class="heading-subtitle font-medium my-2">
+    <label class="text-md font-medium">
         {{ text }}
-    </h2>
+    </label>
 </template>
 <script>
 export default {
-    name: 'HeadingSubtitle',
+    name: 'CustomLabel',
     props: {
         text: {
             type: String,
             required: true
-        },
+        }
     }
 }
 </script>
-<style lang="scss">
+<style lang="">
+    
 </style>
